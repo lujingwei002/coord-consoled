@@ -43,16 +43,16 @@ void Consoled::onAwake() {
 
 int Consoled::readConfig() {
     ConsoledConfig* config = &this->config;
-    if(!this->coord->config->Get("Consoled", "port", config->Port)) {
+    if(!this->coord->Config->Get("Consoled", "port", config->Port)) {
         return ErrorConfigNotExist;
     }
-    if(!this->coord->config->Get("Consoled", "host", config->Host)) {
+    if(!this->coord->Config->Get("Consoled", "host", config->Host)) {
         return ErrorConfigNotExist;
     }
-    if(!this->coord->config->Get("Consoled", "user", config->User)) {
+    if(!this->coord->Config->Get("Consoled", "user", config->User)) {
         return ErrorConfigNotExist;
     }
-    if(!this->coord->config->Get("Consoled", "password", config->Password)) {
+    if(!this->coord->Config->Get("Consoled", "password", config->Password)) {
         return ErrorConfigNotExist;
     }
     return 0;
